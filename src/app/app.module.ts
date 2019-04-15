@@ -8,7 +8,7 @@ import { StartCheckinComponent } from './components/start-checkin/start-checkin.
 import { CheckinComponent } from './components/checkin/checkin.component';
 import { ConfirmCheckinComponent } from './components/confirm-checkin/confirm-checkin.component';
 import { FormsModule } from '@angular/forms';
-import { DataService } from './services/data.service';
+import { DataService } from './services/data/data.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
