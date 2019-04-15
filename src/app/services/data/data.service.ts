@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable, TimeoutError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class DataService {
 
   constructor(private _http: Http) { }
 
-  public getReservation(id: number): any {
+  public getReservation(id: any): any {
     return this._http.get(this.url + id)
       .pipe(map(response => {
         return response.json();
