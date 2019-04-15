@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  url: string = "localhost:8080/flightreservation/reservations";
+  url: string = "localhost:8081/flightreservation/reservations";
 
   constructor(private _http: Http) { }
 
@@ -15,15 +15,15 @@ export class DataService {
     return this._http.get(this.url + id)
       .pipe(map(response => {
         return response.json();
-      }, error => {
+      }, (error: any) => {
         console.error(error);
       }))
   }
 
-  public checkin(checkinRequest): Observable<Response> {
+  public sendCheckinRequest(checkinRequest: any): Observable<Response> {
     return this._http.post(this.url, checkinRequest).pipe(map(response => {
       return response.json();
-    }, error => {
+    }, (error: any) => {
       console.error(error);
     }));
   }
