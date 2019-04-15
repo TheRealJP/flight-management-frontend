@@ -14,7 +14,7 @@ export class StartCheckinComponent implements OnInit {
   }
 
   onSelect(id: Number) {
-    this.router.navigate(['/checkIn', id]);
+    this.router.navigate(['/checkin', id]);
   }
 
 }
