@@ -7,21 +7,23 @@ import { AppComponent } from './app.component';
 import { StartCheckinComponent } from './components/start-checkin/start-checkin.component';
 import { CheckinComponent } from './components/checkin/checkin.component';
 import { ConfirmCheckinComponent } from './components/confirm-checkin/confirm-checkin.component';
-import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './services/data.service';
+import { ConfirmComponent } from './components/confirm/confirm.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartCheckinComponent,
     CheckinComponent,
-    ConfirmCheckinComponent
+    ConfirmCheckinComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    HttpModule,
     FormsModule
   ],
   providers: [DataService],
