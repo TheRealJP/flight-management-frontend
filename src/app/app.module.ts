@@ -9,7 +9,6 @@ import { CheckinComponent } from './components/checkin/checkin.component';
 import { ConfirmCheckinComponent } from './components/confirm-checkin/confirm-checkin.component';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './services/data.service';
-import { ConfirmComponent } from './components/confirm/confirm.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { HttpClientModule } from '@angular/common/http';
     StartCheckinComponent,
     CheckinComponent,
     ConfirmCheckinComponent,
-    ConfirmComponent
   ],
   imports: [
     BrowserModule,
