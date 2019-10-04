@@ -1,6 +1,5 @@
-# Checkinapp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+# Flight Management Clone
+This project was created to showcase extensive knowledge of front-end development concepts and usage of the Angular framework.
 
 ## Development server
 
