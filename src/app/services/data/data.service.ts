@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { map } from 'rxjs/operators';
-import { Observable, TimeoutError } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
   providedIn: 'root'
@@ -9,23 +8,17 @@ import { Observable, TimeoutError } from 'rxjs';
 export class DataService {
   url: string = "localhost:8081/flightreservation/reservations";
 
-  constructor(private _http: Http) { }
+  constructor(private http: HttpClient) { }
 
-  public getReservation(id: any): any {
-    return this._http.get(this.url + id)
-      .pipe(map(response => {
-        return response.json();
-      }, (error: any) => {
-        console.error(error);
-      }))
+  public getReservation(id: number): any {
+    return this.http.get(this.url + "/" + id).subscribe(data => console.log(data));
   }
 
-  public sendCheckinRequest(checkinRequest: any): Observable<Response> {
-    return this._http.post(this.url, checkinRequest).pipe(map(response => {
-      return response.json();
-    }, (error: any) => {
-      console.error(error);
-    }));
+  public sendCheckinRequest(checkinRequest: String): Observable<any> {
+    let response: Observable<any> = this.http.post(this.url, checkinRequest);
+
+    response.toPromise().catch(error => console.log(error));
+    return response;
   }
 
 }
