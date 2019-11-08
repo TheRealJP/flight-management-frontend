@@ -1,4 +1,7 @@
 # Flight Management Clone
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5c9d437ee6d344e5900427fca0812d5f)](https://www.codacy.com/manual/notjuanortiz/travelab-site?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=notjuanortiz/travelab-site&amp;utm_campaign=Badge_Grade)
+
 This project was created to showcase extensive knowledge of front-end development concepts and usage of the Angular framework.
 
 ## Development server
